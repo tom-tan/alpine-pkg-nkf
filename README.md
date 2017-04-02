@@ -2,11 +2,10 @@
 This is a nkf (Network Kanji Filter) package for Alpine Linux.
 
 ## How to build a package
-You can build a package by using the following commands.
+You can build a package by using the following command.
 It generates APK packages for `nkf` and `nkf-doc` in `$PWD/packages`.
 ```
-$ docker build nkf-builder .
-$ docker run -v $PWD/packages:/packages -v ~/.abuild:/home/builder/.abuild:ro --rm nkf-builder
+$ docker run -v $PWD/packages:/packages -v ~/.abuild:/home/builder/.abuild:ro --rm ttanjo/alpine-pkg-nkf
 ```
 
 I assume that `~/.abuild` contains a private key file and `abuild.conf` (for environment variables).
